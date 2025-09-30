@@ -1,0 +1,62 @@
+/* Fondo general de la aplicación */
+.background {
+    -fx-background-color: linear-gradient(to bottom right, #232526, #414345 80%);
+}
+/* Título principal */
+.title-label {
+    -fx-font-size: 32px;
+    -fx-text-fill: #3498DB;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 8 0;
+    -fx-effect: dropshadow(gaussian, #000, 2, 0.2, 0, 2);
+}
+/* Subtítulo */
+.subtitle-label {
+    -fx-font-size: 17px;
+    -fx-text-fill: #E0E0E0;
+    -fx-font-weight: 600;
+    -fx-padding: 0 0 10 0;
+}
+/* Campos de texto */
+.input-field {
+    -fx-background-color: #232323;
+    -fx-text-fill: #E0E0E0;
+    -fx-prompt-text-fill: #888;
+    -fx-font-size: 15px;
+    -fx-background-radius: 8;
+    -fx-padding: 10 14 10 14;
+    -fx-border-color: #3498DB;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-radius: 0 0 8 8;
+}
+/* Botón principal */
+.accent-button {
+    -fx-background-color: linear-gradient(to right, #3498DB, #2980B9);
+    -fx-text-fill: #fff;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 10 0 10 0;
+    -fx-cursor: hand;
+    -fx-font-size: 16px;
+    -fx-effect: dropshadow(gaussian, #2980B9, 2, 0.2, 0, 2);
+    -fx-border-color: #217dbb;
+    -fx-border-width: 0 0 2 0;
+}
+.accent-button:hover {
+    -fx-background-color: linear-gradient(to right, #217dbb, #3498DB);
+}
+/* Mensaje de error */
+.error-label {
+    -fx-text-fill: #E74C3C;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 6 0 0 0;
+}
+/* Icono de cafetería (FontAwesome) */
+.icon-label {
+    -fx-font-family: "FontAwesome";
+    -fx-font-size: 44px;
+    -fx-text-fill: #E67E22;
+    -fx-padding: 0 0 10 0;
+    -fx-effect: dropshadow(gaussian, #000, 2, 0.2, 0, 2);
+}

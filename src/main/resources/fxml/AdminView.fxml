@@ -1,0 +1,49 @@
+<!--
+    Vista principal del Administrador
+    - Panel moderno, responsivo y amigable
+    - Incluye dashboard, inventario, reportes y cierre diario
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.orderlink.pos.controller.AdminController" styleClass="background">
+    <!-- Barra superior con título y posible usuario -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="16" style="-fx-background-color: #3498DB; -fx-padding: 12;">
+            <Label text="&#xf0f4;" styleClass="icon-label" />
+            <Label text="Panel de Administrador" styleClass="title-label" />
+        </HBox>
+    </top>
+    <center>
+        <TabPane tabClosingPolicy="UNAVAILABLE" style="-fx-background-radius: 12; -fx-padding: 18;">
+            <!-- Dashboard de métricas -->
+            <Tab text="Dashboard">
+                <VBox spacing="18" alignment="CENTER">
+                    <Label text="Ventas del día: $0" fx:id="ventasLabel" styleClass="subtitle-label" />
+                    <Label text="Transacciones: 0" fx:id="transaccionesLabel" styleClass="subtitle-label" />
+                    <Label text="Producto más vendido: ---" fx:id="productoLabel" styleClass="subtitle-label" />
+                </VBox>
+            </Tab>
+            <!-- Inventario CRUD -->
+            <Tab text="Inventario">
+                <VBox spacing="14" alignment="CENTER">
+                    <Button text="Agregar Producto" fx:id="agregarBtn" styleClass="accent-button" />
+                    <TableView fx:id="inventarioTable" prefHeight="320" prefWidth="600" />
+                </VBox>
+            </Tab>
+            <!-- Reportes -->
+            <Tab text="Reportes">
+                <VBox spacing="14" alignment="CENTER">
+                    <Button text="Generar Reporte de Ventas" fx:id="reporteVentasBtn" styleClass="accent-button" />
+                    <Button text="Generar Reporte de Inventario" fx:id="reporteInventarioBtn" styleClass="accent-button" />
+                </VBox>
+            </Tab>
+            <!-- Cierre Diario -->
+            <Tab text="Cierre Diario">
+                <VBox spacing="14" alignment="CENTER">
+                    <Button text="Cerrar Día" fx:id="cierreBtn" styleClass="accent-button" />
+                </VBox>
+            </Tab>
+        </TabPane>
+    </center>
+</BorderPane>

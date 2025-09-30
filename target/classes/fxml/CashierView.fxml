@@ -1,0 +1,37 @@
+<!--
+    Vista principal del Cajero
+    - Panel moderno, responsivo y amigable
+    - Incluye lista de productos, carrito, deshacer/rehacer y cobro
+-->
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.orderlink.pos.controller.CashierController" styleClass="background">
+    <!-- Barra superior con título y posible usuario -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="16" style="-fx-background-color: #27ae60; -fx-padding: 12;">
+            <Label text="&#xf0f4;" styleClass="icon-label" />
+            <Label text="Panel de Cajero" styleClass="title-label" />
+        </HBox>
+    </top>
+    <center>
+        <HBox spacing="32" alignment="CENTER" style="-fx-padding: 24;">
+            <!-- Lista de productos -->
+            <VBox spacing="14" alignment="TOP_CENTER">
+                <Label text="Productos" styleClass="subtitle-label" />
+                <ListView fx:id="productosList" prefWidth="220" prefHeight="340" />
+            </VBox>
+            <!-- Carrito y acciones -->
+            <VBox spacing="14" alignment="TOP_CENTER">
+                <Label text="Carrito" styleClass="subtitle-label" />
+                <TableView fx:id="carritoTable" prefWidth="320" prefHeight="220" />
+                <HBox spacing="10" alignment="CENTER">
+                    <Button text="Deshacer" fx:id="undoBtn" styleClass="accent-button" />
+                    <Button text="Rehacer" fx:id="redoBtn" styleClass="accent-button" />
+                </HBox>
+                <Label text="Total: $0" fx:id="totalLabel" styleClass="subtitle-label" />
+                <Button text="Pagar" fx:id="pagarBtn" styleClass="accent-button" />
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>

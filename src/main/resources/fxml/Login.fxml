@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<!--
+  Pantalla de Login de OrderLink POS
+  - Distribución centrada y responsiva
+  - Icono, título, campos de usuario y contraseña, botón y mensajes de error
+  - Amigable tanto en ventana como en pantalla completa
+-->
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.orderlink.pos.controller.LoginController"
+      styleClass="background">
+  <VBox alignment="CENTER" spacing="18.0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+        style="-fx-background-color: rgba(255,255,255,0.97); -fx-background-radius: 18; -fx-padding: 36;">
+    <!-- Icono de cafetería (FontAwesome) -->
+    <Label text="&#xf0f4;" styleClass="icon-label"/>
+    <!-- Título de la app -->
+    <Label text="OrderLink POS" styleClass="title-label"/>
+    <!-- Subtítulo -->
+    <Label text="Iniciar Sesión" styleClass="subtitle-label"/>
+    <!-- Campo de usuario -->
+    <TextField fx:id="usernameField" promptText="Usuario" styleClass="input-field"/>
+    <!-- Campo de contraseña -->
+    <PasswordField fx:id="passwordField" promptText="Contraseña" styleClass="input-field"/>
+    <!-- Botón de ingreso -->
+    <Button fx:id="loginButton" text="Ingresar" styleClass="accent-button"/>
+    <!-- Mensaje de error -->
+    <Label fx:id="errorLabel" text="" styleClass="error-label"/>
+  </VBox>
+</AnchorPane>
